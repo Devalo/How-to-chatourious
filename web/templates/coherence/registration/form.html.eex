@@ -7,7 +7,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= required_label f, :name, class: "control-label" %>
+    <%= required_label f, :username, class: "control-label" %>
     <%= text_input f, :name, class: "form-control", required: "" %>
     <%= error_tag f, :name %>
   </div>

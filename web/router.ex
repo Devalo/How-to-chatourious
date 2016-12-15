@@ -38,12 +38,12 @@ defmodule Chatourius.Router do
 
   scope "/", Chatourius do
     pipe_through :browser # Use the default browser stack
-    get "/", PageController, :index
   end
 
   # Add this block
   scope "/", Chatourius do
     pipe_through :protected
+    get "/", PageController, :index
     # Add protected routes below
   end
 end
