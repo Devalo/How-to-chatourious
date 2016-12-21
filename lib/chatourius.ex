@@ -8,12 +8,9 @@ defmodule Chatourius do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Start the Ecto repository
       supervisor(Chatourius.Repo, []),
-      # Start the endpoint when the application starts
       supervisor(Chatourius.Endpoint, []),
-      # Start your own worker by calling: Chatourius.Worker.start_link(arg1, arg2, arg3)
-      # worker(Chatourius.Worker, [arg1, arg2, arg3]),
+      supervisor(Chatourius.Presence, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
